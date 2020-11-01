@@ -43,8 +43,9 @@
 
       <div class="row">
         <div class="col-8 ">
-          <div class="card p-1" *ngIf="currentLecture != null; else elseBlock">
+          <div  *ngIf="currentLecture != null; else elseBlock">
             <app-player [url]="currentLecture.source"></app-player>
+
             <p>{{currentLecture.description}}</p>
           </div>
           <ng-template #elseBlock>
